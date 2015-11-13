@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* RESET */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,big,cite,code,del,dfn,em,font,img,ins,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{padding:0; margin:0;font-family:dotum,Helvetica,sans-serif;font-size:12px;color:#333333}
+img,li,button{vertical-align:middle;text-align:left;}
+
+
+ /*html {overflow-y:scroll;} */
+select,input{vertical-align:middle;text-align:left;}
+form legend, table caption{width:0;height:0;font-size:0;text-indent:-9999px;line-height:0;}
+textarea{font-size:12px;overflow:auto;}
+fieldset,iframe{border:0 none;}
+table,div{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal;}
+ul,li,ol{list-style:none;}
+hr{overflow:hidden;height:0;width:0;border:0 none;}
+li,p,dt,dd,div,span{white-space:normal;}
+body,div{font-family:Dotum,Arial,Tahoma;font-size:12px;color:#000000;}
+input,select,textarea{padding:0; margin:0;font-family:Dotum,Helvetica,sans-serif;font-size:12px;color:#333333;border:1px solid #cccccc;}
+input[type=text],input[type=password]{height:19px;padding:1px;line-height:19px;background-color:#ffffff;}
+select{height:23px;}
+a  {text-decoration:none;}
+label{display:inline-block;cursor:pointer;}
+img, button{border:none;}
+
+
+
+/* ·¹ÀÌ¾Æ¿ô */
+#wrap{width:100%}
+#header{width:100%}
+#footer{clear:both;background:#f1f1f1}
+#footer ul{width:800px;padding:15px 0;margin:0 auto;overflow:hidden}
+#footer li{float:left;margin:0 10px 0 0;}
+#header .gnb{float:right;padding:15px 15px 15px 0}
+#header .gnb li{font-size:12px;}
+#header .menu{clear:both;}
+#header .menu h1{float:left;width:132px;margin:0 0 0 10px;position:relative}
+#header .menu h1 img{position:absolute;bottom:-10px}
+#header .menu ul{margin:0 0 0 142px;border-left:10px solid #fff;background:#4894d0;overflow:hidden;padding:10px 0}
+#header .menu li{float:left;color:#ffffff;border-right:1px solid #fff;padding:0 20px}
+#header .menu li a{color:#ffffff}
+#header .menu li a:hover{color:#ffffff;font-weight:bold}
+#main{width:100%}
+#contents{clear:both}
+.left_menu{float:left;width:152px;height:200px;background:#eeeeee}
+.left_menu h2{background:#03004d;height:30px;color:#fff;padding:18px 0 0 10px}
+.left_menu ul{padding:0 10px}
+.left_menu li{padding:10px 0 10px 10px;border-bottom:1px solid #7d7d7d}
+.left_menu li a:hover{color:#333;font-weight:bold}
+.main{float:left;padding:20px 0 0 10px;}
+.navi{clear:both;}
+.navi li{background:url(../images/navi_home.jpg) no-repeat 0 0;padding:0 0 0 15px}
+.bbs1{float:left;}
+.bbs1 ul{padding:20px 10px 0 10px}
+.bbs1 .tb_ty1{border-top:2px solid #1badf6;border-left:1px solid #e5e5e5;margin:0 0 10px 0}
+.bbs1 th{text-align:left;padding:0 0 0 10px;background:#eef9ff;height:35px;border-bottom:1px solid #e5e5e5;border-right:1px solid #e5e5e5;}
+.bbs1 th.type1{background:#fff3ed}
+.bbs1 th.type2{background:#fffeec;border-left:1px solid #e5e5e5;border-top:1px solid #e5e5e5}
+.bbs1 th.type3{text-align:center}
+.bbs1 td{border:1px solid #e5e5e5;height:35px;padding:3px 0 3px 10px}
+.bbs1 td.type1{padding:10px 0 0 10px;line-height:20px}
+.bbs1 td.type2{border:0;border-right:1px solid #e5e5e5;padding:0 0 0 10px}
+.bbs1 td.type3{text-align:center;height:20px}
+.bbs1 td.type4{text-align:left;height:20px}
+.bbs1 .line_txt{position:relative;border-bottom:1px solid #cccccc;padding:50px 0 10px 0}
+.bbs1 .line_txt p{position:absolute;right:0;top:20px}
+.bbs1 .btn{text-align:right;padding:15px 0}
+.bbs1 input{padding: 0 0 0 5px}
+.bbs1 textarea{padding:10px}
+
+.serch{clear:both;padding:10px 10px 0 10px}
+.serch select{width:100px}
+.serch input{height:20px;}
+.serch ul{margin:10px 0 0 0;background:#f5f5f5;padding:10px 20px;clear:both}
+.serch li{margin:0 0 5px 0}
+
+.data_link a{color:blue;}
+
+.paging {width:100%;clear:both;padding:30px 0}
+.paging ul{width:800px;margin:0 auto;text-align:center}
+.paging li{text-align:center;display:inline}
+.paging li.over{color:#fff;font-weight:bold;background:red;padding:0 2px;margin:0 5px}
+.paging li.off{color:#333;padding:0 2px;margin:0 5px}
+
+.login{width:100%;margin:10% 0}
+.login ul{width:520px;margin:0 auto}
+.login h1{margin:0 0 10px 0}
+.login li.type1{position:relative;width:370px;border:1px solid #ececec;padding:20px 75px;text-align:center}
+.login li.type2{padding:21px 75px;width:370px;text-align:left;border-left:1px solid #ececec;border-right:1px solid #ececec;border-bottom:1px solid #ececec;}
+.login li.type2 img{margin:0 0 10px 0}
+.login dt{text-align:left;float:left;width:70px;margin:5px 0 0 0}
+.login dd{text-align:left;}
+.login h2{text-align:left;margin:0 0 30px 0}
+
+.login dl{margin:0 0 6px 0}
+.login li p{position:absolute;right:70px}
+.login input{padding:0 0 0 5px}
+/*.login input.over{border:0;background:url(<?php echo IMG_DIR?>/login_img6.jpg) no-repeat;width:200px;height:31px}*/
+.login input.input-xlarge{border:0;background:url(../images/login_img7.jpg) no-repeat;width:200px;height:31px}
+.login input.off{border:0;background:url(../images/login_img7.jpg) no-repeat;width:200px;height:31px}
+
+.regi_input2{ime-mode:disabled;}
+/* *레이어 팝업 */
+.pop-layer {display:none; position: absolute; top: 50%; left: 50%; width: 550px; height:auto;  background-color:#fff; border: 5px solid #3571B5; z-index: 10;}	
+.pop-layer .pop-container {padding: 20px 25px;}
+.pop-layer p.ctxt {color: #666; line-height: 25px;}
+.pop-layer .btn-r {width: 100%; margin:10px 0 20px; padding-top: 10px; border-top: 1px solid #DDD; text-align:right;}
+
+a.cbtn {display:inline-block; height:25px; padding:0 14px 0; border:1px solid #304a8a; background-color:#3f5a9d; font-size:13px; color:#fff; line-height:25px;}	
+a.cbtn2 {display:inline-block; height:25px; padding:0 14px 0; border:1px solid #304a8a; background-color:#3f5a9d; font-size:13px; color:#fff; line-height:25px;}	
+
+a.cbtn:hover {border: 1px solid #091940; background-color:#1f326a; color:#fff;}
+
+.help-block {color:red;}
+/* *레이어 팝업  끝*/	
+/*
+개발자 추가
+
+.col_cn {display: none; }
+.data_link a{color:blue;}
+*/
+.page-index {text-align: center;}

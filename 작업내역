@@ -1,0 +1,3 @@
+$('#btn_insert')attr('action', act).submit();
+
+IE 화면 깨짐 현상.

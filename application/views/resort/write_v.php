@@ -1,0 +1,203 @@
+<div id="contents">	
+	<div class="left_menu">
+		<?php require_once  INCLUDE_ROOT .'/mnuLeftAdminResort.php';?> <!-- Left menu -->
+	</div>
+	<div class="main">
+		<div class="navi">
+			<ul>
+				<li><a href="#">HOME</a> > 리조트등록</li>	
+			</ul>
+		</div>
+		<form name="frm_resort" id="frm_resort" method="post" action="">
+			<div  class="bbs1">
+			<ul>
+				<li>
+					<table class="tb_ty1">
+						<colgroup>
+							<col width="145">
+							<col width="675">
+						</colgroup>
+						<tr>
+							<th>국가(지명)/지역</th>
+							<td>
+								<select style="width:200px" name="cbo_nation" id="cbo_nation">
+									<option value="0">-국가선택-</option>
+	<?php	//국가
+	foreach ($nation as $nl)
+	{
+	?>					
+									<option value="<?php echo $nl -> code_cn;?>"><?php echo $nl -> code_name;?></option>
+	<?php
+	}
+	?>								
+								</select>
+								<select style="width:180px" name="cbo_area" id="cbo_area">
+									<option>-지역선택-</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>등급</th>
+							<td>
+								<select style="width:150px"name="cbo_room_grade" id="cbo_room_grade">
+									<option value="0">-등급선택-</option>
+	<?php 		//등급
+	foreach ($grade as $gl)
+	{
+	?>					
+									<option value="<?php echo $gl -> code_cn;?>"><?php echo $gl -> code_name;?></option>
+	<?php
+	}
+	?>								
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th >리조트명(한글)</th>
+							<td><input type="text" style="width:450px" name="txt_title_kr" id="txt_title_kr"></td>
+						</tr>
+						<tr>
+							<th>리조트명(영문)</th>
+							<td><input type="text" style="width:450px" name="txt_title_us" id="txt_title_us"></td>
+						</tr>
+						<tr>
+							<th>주소</th>
+							<td><input type="text" style="width:450px" name="txt_address" id="txt_address"></td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td><input type="text" style="width:450px" name="txt_tel" id="txt_tel"></td>
+						</tr>
+						<tr>
+							<th>팩스번호</th>
+							<td><input type="text" style="width:450px" name="txt_fax" id="txt_fax"></td>
+						</tr>
+						<tr>
+							<th>객실타입</th>
+							<td>
+								<div name="dv_room_type" id="dv_room_type">
+									<table name="tbl_room_type" id ="tbl_room_type">
+										<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+<!-- 											<col width="10">
+											<col width="90">
+											<col width="10">
+											<col width="90">										
+											<col width="10">
+											<col width="90">	
+											<col width="10">
+ -->										</colgroup>
+										<thead>
+											<tr>
+												<th>No</th>
+												<th>객실타입</th>
+												<th>No</th>
+												<th>객실타입</th>	
+												<th>No</th>
+												<th>객실타입</th>
+												<th>라인</th>
+											</tr>		
+										</thead>											
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td><input type="text" style="width:90%" name="txt_room_type_1_1" id="txt_room_type_1_1"></td>
+												<td>2</td>
+												<td><input type="text" style="width:90%" name="txt_room_type_1_2" id="txt_room_type_1_2"></td>
+												<td>3</td>
+												<td><input type="text" style="width:90%" name="txt_room_type_1_3" id="txt_room_type_1_3"></td>
+												<!-- <td><button type="button" name="btn_add_line" id="btn_add_line">추가</button></td> -->
+												<td>
+														<button type="button" name="btn_add_line">+</button>
+														<button type="button" name="btn_del_line">-</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>식사타입</th>
+							<td>
+								<div name="dv_meal_checks" id="dv_meal_checks">
+	<?php 		//식사타입
+	foreach ($meal as $ml)
+	{
+	?>							
+									<label><input type="checkbox" name="chk_meal" id="chk_meal_<?php echo $ml -> code_cn;?>" value="<?php echo $ml -> code_cn;?>" /><?php echo $ml -> code_name;?>&nbsp</label>
+	<?php
+	}
+	?>	
+								<div>
+							</td>
+						</tr>
+						<tr>
+							<th>이동수단</th>
+							<td>
+								<div name="dv_vehicle_checks" id="dv_vehicle_checks">
+	<?php 		//이동수단
+	foreach ($vehicle as $vl)
+	{
+	?>							
+								<label><input type="checkbox" name="chk_vehicle" id="chk_vehicle_<?php echo $vl -> code_cn;?>" value="<?php echo $vl -> code_cn;?>" /><?php echo $vl -> code_name;?>&nbsp</label>
+	<?php
+	}
+	?>
+								<div>							
+							</td>
+						</tr>
+						<tr>
+							<th>리조트특징</th>
+							<td><textarea style="width:535px;height:120px;margin:3px 0;" name="txt_special" id="txt_special"></textarea></td>
+						</tr>
+						<tr>
+							<th>허니문 특전</th>
+							<td><textarea style="width:535px;height:120px;margin:3px 0" name="txt_honeymoon_privilege" id="txt_honeymoon_privilege"></textarea></td>
+						</tr>
+						<tr>
+							<th>포함사항</th>
+							<td><textarea style="width:535px;height:120px;margin:3px 0" name="txt_inclusion" id="txt_inclusion"></textarea></td>
+						</tr>
+						<tr>
+							<th>불포함사항</th>
+							<td><textarea style="width:535px;height:120px;margin:3px 0" name="txt_exclusion" id="txt_exclusion"></textarea></td>
+						</tr>
+						</table>						
+				<!--<li class="btn"><div name="btn_area" id="btn_area"><a href="#" name="btn_del" id="btn_del"><img src="../images/btn6.jpg" alt="정보삭제"></a> <a href="#" name="btn_update" id="btn_update"><img src="../images/btn2.jpg" alt="정보수정"></a> <a href="#" name="btn_insert" id="btn_insert"><img src="../images/btn7.jpg" alt="리조트등록"></a></div></li>-->
+				<li class="btn">
+					<div name="btn_area" id="btn_area">
+						 <!--
+						 <img name="btn_del" id="btn_del" src="<?php echo IMG_DIR?>/btn6.jpg" alt="정보삭제">
+						 <img  name="btn_update" id="btn_update" src="<?php echo IMG_DIR?>/btn2.jpg" alt="정보수정">
+						 -->
+						 <!--<img name="btn_insert" id="btn_insert" src="<?php echo IMG_DIR?>/btn7.jpg" alt="리조트등록">-->
+			 			 <button type="button" name="btn_insert" id="btn_insert"><img src="<?php echo IMG_DIR?>/btn7.jpg" alt="리조트등록"></button>
+					</div>
+				</li>			
+			</ul>
+			<div id="dv_hdn_area">
+				<!--<input type="hidden" name="hdn_btn_status" id="hdn_btn_status">--><!-- 버튼상태값(I:insert, U:update, D:delete-->
+				<input type="hidden" name="hdn_room_code_cns" id="hdn_room_code_cns"><!-- 객실타입 체크박스 cn값들-->
+				<input type="hidden" name="hdn_meal_code_cns" id="hdn_meal_code_cns"><!-- 식사타입 체크박스 cn값들-->
+				<input type="hidden" name="hdn_vehicle_code_cns" id="hdn_vehicle_code_cns"><!-- 식사타입 체크박스 cn값들-->
+				<input type="hidden" name="hdn_room_rows" id="hdn_room_rows" value="1"><!-- 룸타입 로우카운트-->
+			</div>
+		</form>			 
+		</div>
+	</div>
+  </div>
+  <!-- javascript 영역 -->
+  <script src="<?php echo JS_ROOT?>/common/common.js"></script>
+  <script src="<?php echo JS_ROOT?>/resortWrite.js"></script> 
+  <!-- javascript 영역 끝-->  
+  </div>
+
+ </body>
+</html>
