@@ -124,7 +124,9 @@ objResortWriteEvent ={
                 }
             }
         s_room_types =room_types.join(',');
+        // console.log(s_room_types);
         $('#hdn_room_code_cns').val(s_room_types);
+        console.log($('#hdn_room_code_cns').val(s_room_types));
         $('#frm_resort').submit(); 
     }
     // rtnTotalrow: function (){

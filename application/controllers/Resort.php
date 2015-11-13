@@ -119,16 +119,17 @@ class Resort extends CI_Controller {
 	{
 		$data['nation'] =$this->common_m->get_common_code_list(4);			//국가 공통코드		
 		$data['grade'] =$this->common_m->get_common_code_list(1);			//등급 공통코드
-		$data['room'] =$this->common_m->get_common_code_list(7);			//객실타입 공통코드
+		// $data['room'] =$this->common_m->get_common_code_list(7);			//객실타입 공통코드
 		$data['meal'] =$this->common_m->get_common_code_list(2);			//식사타입 공통코드
 		$data['vehicle'] =$this->common_m->get_common_code_list(3);		//이동수단 공통코드
 	
-
-		
 		//게시판 이름과 리조트cn에 해당하는 data 가져오기
 		$data['views'] = $this->resort_m->get_view($this->uri->segment(2), $this->uri->segment(3));
 		//$data['views']->grade ;    
 		//$data['views']->cGrade[$data['views']->grade['1']] = "selected";
+		$data['room'] = array_reverse(split(',', $data['views']  -> room_code_cns));
+
+// echo $data['views']  -> room_code_cns;
 
 		//view 호출
 		$this->load->view('resort/view_v', $data);

@@ -78,16 +78,54 @@
 						<tr>
 							<th>객실타입</th>
 							<td>
-								<div name="dv_room_checks" id="dv_room_checks">
+								<div name="dv_room_type" id="dv_room_type">
+									<table name="tbl_room_type" id ="tbl_room_type">
+										<thead>
+											<tr>
+												<th>No</th>
+												<th>객실타입</th>
+												<th>No</th>
+												<th>객실타입</th>	
+												<th>No</th>
+												<th>객실타입</th>
+												<th>라인</th>
+											</tr>		
+										</thead>											
+										<tbody>
 	<?php 		//객실타입
-	foreach ($room as $rl)
-	{
-	?>							
-									<label><input type="checkbox" name="chk_room" id="chk_room_<?php echo $rl -> code_cn;?>" value="<?php echo $rl -> code_cn;?>" /><?php echo $rl -> code_name;?>&nbsp</label>
+	// foreach ($room as $rl)
+	$row_count = count($room) / 3;
+	$k = 0;
+	for ($i=0; $i < $row_count ; $i++) { 
+	?>					
+											<tr>
+	<?php
+		for ($j=0; $j < 3; $j++) { 
+	?>
+												<td><?php echo $k + 1?></td>
+												<td><input type="text" style="width:90%" name="txt_room_type_<?php echo $i+1?>_<?php echo $j?>" id="txt_room_type_<?php echo $i+1?>_<?php echo $j?>" value ="<?php echo $room[$k];	?>"></td>
+
+	<?php
+		$k++;
+		}
+	?>
+<!-- 												<td>1</td>
+												<td><input type="text" style="width:90%" name="txt_room_type_1_1" id="txt_room_type_1_1" value ="<?php echo $room[$i];	?>"></td>
+												<td>2</td>
+												<td><input type="text" style="width:90%" name="txt_room_type_1_2" id="txt_room_type_1_2" value ="<?php echo $room[$i];	?>"></td>
+												<td>3</td>
+												<td><input type="text" style="width:90%" name="txt_room_type_1_3" id="txt_room_type_1_3" value ="<?php echo $room[$i];	?>"></td>-->												
+												<td>
+														<button type="button" name="btn_add_line">+</button>
+														<button type="button" name="btn_del_line">-</button>
+												</td>
+											</tr>
 	<?php
 	}
-	?>									
-								</div>							
+	?>	
+										</tbody>
+									</table>
+								</div>
 							</td>
 						</tr>
 						<tr>
