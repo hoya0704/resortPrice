@@ -1,3 +1,4 @@
+//리조트 입력 js 
 var objResortWriteAjax={},
         objResortWriteEvent ={},
         objResortWriteVal = {};
